@@ -1,1 +1,23 @@
-
+import java.util.*;
+import java.io.*;  
+public class entry
+{
+	private int id;
+	private String category;
+	private String school;
+	private String rmNum;
+	private ASJDFKLAJSDKLFJ TIME;
+	private int entryNum;
+	private String entryTitle;
+	private String weapon;
+	private String note;
+	private int score1;
+	private int score2;
+	private int score3;
+	private int score4;
+	private int score5;
+	private int score6;
+	private int score7;
+	private int score8;
+	private int score9;
+}
