@@ -1,0 +1,18 @@
+import java.util.*;
+import java.io.*;  
+public class entryList
+{
+	Scanner infile = new Scanner(new FileReader("ScheduleListing.txt")); //takes in textfile and calls it infile
+	int countEntries = 1; //number of entries
+	String temp = infile.nextString();
+	while(infile.nextInt!=null) //counts number of entries. Temp was because first string is the categories
+	{
+		countEntries++;
+	}
+	Scanner sc = new Scanner(new FileReader("ScheduleListing.txt")); //resets the next input to first line again.
+	for(int i=0;i<countEntries;i++)
+	{
+		String[] thisLine = new String[19];
+		thisLine = column.split("\\t"); // PUT STUFF IN TO PUT VARIABLES INTO ENTRY CLASS.
+	}
+}
