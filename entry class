@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;  
-public class entry
+public class entry    // ONLY HAS VARIABLES. AND NEED TO MAKE TIME OBJ. 
 {
 	private int id;
 	private String category;
