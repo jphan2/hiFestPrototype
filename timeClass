@@ -1,0 +1,10 @@
+import java.util.*;
+import java.io.*; 
+public class time
+{
+	private int day;
+	private int month;
+	private int year;
+	private int hour;
+	private boolean amOrPm;
+}
