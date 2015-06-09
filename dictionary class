@@ -1,0 +1,51 @@
+import java.util.*;
+public class EntryDictionary {
+    static String newLine = System.getProperty("line.separator");
+    public static void main(String[] args) {
+
+        System.out.println(newLine + "Dictionary in Java" + newLine);
+        System.out.println("-----------------------" + newLine);
+        System.out.println("Adding items to the Dictionary" + newLine);
+        //Creating dictionary object
+        //dictionary can be created using HashTable object
+        //as dictionary is an abstract class
+        Dictionary dict = new Hashtable();
+        String jerry= new String("my name is jerry phan");
+        //you add elements to dictionary using put method
+        //put(key, value)
+        String yup[]=new String[5];
+        yup[0]=("loser");
+        yup[1]=("a");
+        yup[2]=("not");
+        yup[3]=("am");
+        yup[4]=("I");
+        for (int i =0; i<yup.length;i++)
+        {
+            dict.put(i+1, yup[i]);
+        }
+
+        System.out.println(newLine + "Items in the dictionary..." + dict + newLine);
+        System.out.println("-----------------------" + newLine);
+
+        //elements can be retrieved using their key
+        System.out.println("Retrieve element from dictionary with key 1 : " + 
+            dict.get(1) + newLine);
+        System.out.println("-----------------------" + newLine);
+
+        //elements can be removed using their key
+        System.out.println("Removing element from dictionary with key 2 : " + 
+            dict.remove(2) + newLine);
+
+        System.out.println("Items in the dictionary after removing..." + dict + newLine);
+        System.out.println("-----------------------" + newLine);
+    }
+
+    public void enterInDict(String[] array)
+    {
+        Dictionary dict = new Hashtable();
+        for (int i =0; i<array.length;i++)
+        {
+            dict.put(i+1, array[i]);
+        }
+    }
+}
