@@ -6,7 +6,7 @@ public class entry    // ONLY HAS VARIABLES. AND NEED TO MAKE TIME OBJ.
 	private String category;
 	private String school;
 	private String rmNum;
-	private ASJDFKLAJSDKLFJ TIME;
+	private time timeVariable;
 	private int entryNum;
 	private String entryTitle;
 	private String weapon;
@@ -20,4 +20,13 @@ public class entry    // ONLY HAS VARIABLES. AND NEED TO MAKE TIME OBJ.
 	private int score7;
 	private int score8;
 	private int score9;
+	
+	public void setTime(time arg)
+	{
+		
+	}
+	public time getTime()
+	{
+		
+	}
 }
