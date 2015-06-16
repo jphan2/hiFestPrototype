@@ -1,0 +1,11 @@
+import java.util.*;
+import java.io.*; 
+public class Info
+{
+	private int day;    //only need day to differentiate stuff
+//	private String month;
+//	private int year;
+	private int hour;  
+	private boolean amOrPm;
+	private int roomNum
+}
