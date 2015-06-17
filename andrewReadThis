@@ -1,0 +1,24 @@
+import java.util.*;
+import java.io.*;  
+import java.util.Scanner;
+public class entryList
+{
+    public static void driver(String[] args)
+    {
+        Scanner infile = new Scanner(new FileReader("ScheduleListing.txt")); //takes in textfile and calls it infile
+        int countEntries = 1; //number of entries
+        String temp = infile.next();
+        while(infile.next()!=null) //counts number of entries. Temp was because first string is the categories
+        {
+            countEntries++;
+        }
+        Scanner sc = new Scanner(new FileReader("ScheduleListing.txt")); //resets the next input to first line again.
+        temp = sc.next();
+        for(int i=0;i<countEntries;i++)
+        {
+            String thisLine = sc.next();
+            String[] thisLineArray = new String[19];
+            thisLineArray = thisLine.split("\\t"); // PUT STUFF IN TO PUT VARIABLES INTO ENTRY CLASS.
+        }
+    }
+}
