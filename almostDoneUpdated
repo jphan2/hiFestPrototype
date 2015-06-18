@@ -14,8 +14,7 @@ public class entryList
         }
         infile.reset();
         String[][] variable = new String[countEntries][19];
-        int counter = 0;
-        for(int i=0; i<countEntries+1; i++)
+        for(int i=1; i<countEntries+1; i++)
         {
             String someLine = infile.next();
             String[] theSameLine = someLine.split("\\t");
@@ -23,7 +22,6 @@ public class entryList
             for(int s=0;s<19;s++)
             {
                 variable[i][s] = theSameLine[s];
-                counter++;
             }
         }
     }
