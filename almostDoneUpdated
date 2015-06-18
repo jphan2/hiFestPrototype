@@ -17,10 +17,12 @@ public class entryList
         int counter = 0;
         for(int i=0; i<countEntries+1; i++)
         {
-            infile //NOT FINISHED YET
+            String someLine = infile.next();
+            String[] theSameLine = someLine.split("\\t");
+            
             for(int s=0;s<19;s++)
             {
-                variable[i][s] = 
+                variable[i][s] = theSameLine[s];
                 counter++;
             }
         }
