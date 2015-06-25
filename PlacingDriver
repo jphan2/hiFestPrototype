@@ -1,0 +1,40 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+/**
+ * Write a description of class CategoryFrame here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class CategoryFrame extends JFrame
+{
+    Controller controller = null;
+    public CategoryFrame(Controller c)
+    {
+        super("Choose Day, Time, and Room Number");
+        controller = c;
+        setVisible(true);
+        setSize(600,600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JPanel container = new JPanel();
+        container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+        JLabel label1=new JLabel("Enter the Day, Time, and Room Number");
+        JLabel label2=new JLabel("");
+        JButton button1=new JButton("Next");
+        button1.addActionListener(new Listener());
+        CategoryPanel panel=new CategoryPanel();
+        container.add(label1);
+        container.add(panel);
+        container.add(label2);
+        container.add(button1);
+        add(container);
+    }
+    class Listener implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            controller.showFrameB();
+        }
+    }
+}
