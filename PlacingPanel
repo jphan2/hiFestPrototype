@@ -1,0 +1,35 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class PlacingPanel extends JPanel
+{
+    JComboBox entryList;
+    String item;
+    public PlacingPanel(String s)
+    {
+        JLabel place=new JLabel(s);
+        String[] entryStrings = { "-------", "1046071", "2046071", "1046072", "2046072", "1046073", "2046073", "1046081", "2046081", "1046082" };
+        entryList = new JComboBox(entryStrings);
+        entryList.setSelectedIndex(0);
+        entryList.addActionListener(new Listener());
+        add(place);
+        add(entryList);
+    }
+    private class Listener implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e) {
+            JComboBox cb = (JComboBox)e.getSource();
+            String petName = (String)cb.getSelectedItem();
+            cb.setSelectedItem(petName);
+            item=(String)cb.getSelectedItem();
+        }
+    }
+    public JComboBox getBox()
+    {
+        return entryList;
+    }
+    public String getItem()
+    {
+        return item;
+    }
+}
