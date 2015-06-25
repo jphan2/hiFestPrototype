@@ -1,0 +1,49 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class CategoryPanel extends JPanel
+{
+    //puts in day time and room number. once this is done, all the entries that match these properties are displayed
+    public CategoryPanel()
+    {
+        String[] dayStrings = { "Fri. Mar. 20, 15", "Sat. Mar. 21, 15" };
+        String[] timeStrings = { "9:00 AM", "10:00 AM", "2:00 PM" };
+        String[] roomStrings = { "123", "153", "1691" };
+        JComboBox dayList = new JComboBox(dayStrings);
+        JComboBox timeList = new JComboBox(timeStrings);
+        JComboBox roomList = new JComboBox(roomStrings);
+        dayList.setSelectedIndex(0);
+        timeList.setSelectedIndex(0);
+        roomList.setSelectedIndex(0);
+        dayList.addActionListener(new Listener1());
+        timeList.addActionListener(new Listener2());
+        roomList.addActionListener(new Listener3());
+        add(dayList);
+        add(timeList);
+        add(roomList);
+    }
+    private class Listener1 implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e) {
+            JComboBox cb = (JComboBox)e.getSource();
+            String petName = (String)cb.getSelectedItem();
+            cb.setSelectedItem(petName);
+        }
+    }
+    private class Listener2 implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e) {
+            JComboBox cb = (JComboBox)e.getSource();
+            String petName = (String)cb.getSelectedItem();
+            cb.setSelectedItem(petName);
+        }
+    }
+    private class Listener3 implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e) {
+            JComboBox cb = (JComboBox)e.getSource();
+            String petName = (String)cb.getSelectedItem();
+            cb.setSelectedItem(petName);
+        }
+    }
+}
