@@ -1,0 +1,27 @@
+public class Controller
+{
+    CategoryFrame framea;
+    PlacingFrame frameb;
+    /**
+     * Constructor for objects of class Controller
+     */
+    public Controller()
+    {
+        framea = new CategoryFrame(this);
+        frameb = new PlacingFrame(this);
+        framea.setVisible(true);
+        frameb.setVisible(false);
+    }
+
+    public void showFrameB()
+    {
+        frameb.setVisible(true);
+        framea.setVisible(false);
+    }
+
+    public void showFrameA()
+    {
+        framea.setVisible(true);
+        frameb.setVisible(false);
+    }
+}
