@@ -1,0 +1,35 @@
+import java.util.*;
+import java.io.*;  
+import java.util.Scanner;
+public class entryList2
+{
+    public static void driver(String[] args) throws Exception
+    {
+        Scanner infile = new Scanner(new File("ScheduleListing.txt")); //takes in textfile and calls it infile
+        int countEntries = 0; //number of entries
+        while(infile.hasNext()==true) //counts number of entries. Temp was because first string is the categories
+        {
+            infile.nextLine();
+            countEntries++;
+        }   
+        infile.close();
+        Scanner infile2 = new Scanner(new File("ScheduleListing.txt")); 
+        String[][] variable = new String[countEntries][19];
+        String aLine= infile2.nextLine();
+        for(int line=1; line<countEntries; line++)
+        {
+            infile2.useDelimiter("\\t");
+            aLine= infile2.nextLine();
+            for(int columns=0; columns<19; columns++)
+            {
+                int counter=0;
+                String[] myWords= aLine.split("\\t");
+                while(counter<19)
+                {
+                    variable[line-1][columns]= myWords[columns];
+                    counter++;
+                }
+            }
+        }
+    }
+}
