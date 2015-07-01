@@ -1,0 +1,196 @@
+import java.util.*;
+import java.io.*;  
+/**
+ * Write a description of class Entries here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Entry
+{
+    /**
+     * Constructor for objects of class Entries
+     */
+    private String id;
+    private String catName;
+    private String school;
+    private String rmNo;
+    private String date;
+    private String time;
+    private String entryNo;
+    private String entryTitle;
+    private String weapon;
+    private String note;
+    private int score1;
+    private int score2;
+    private int score3;
+    private int score4;
+    private int score5;
+    private int score6;
+    private int score7;
+    private int score8;
+    private int score9;
+    private int totalScore;
+    public Entry(String ID, String category, String School, String RmNo, String theDate, String 
+    theTime, String EntryNo, String EntryTitle, String Weapon, String Note, int Score1, int Score2,
+    int Score3, int Score4, int Score5, int Score6, int Score7, int Score8, int Score9)
+    {
+        id= ID;
+        catName= category;
+        school=School;
+        rmNo=RmNo;
+        date= theDate;
+        time= theTime;
+        entryNo= EntryNo;
+        entryTitle= EntryTitle;
+        weapon= Weapon;
+        note= Note;
+        score1= Score1;
+        score2= Score2;
+        score3= Score3;
+        score4= Score4;
+        score5= Score5;
+        score6= Score6;
+        score7= Score7;
+        score8= Score8;
+        score9= Score9;
+        totalScore = score1+score2+score3+score4+score5+score6+score7+score8+score9;
+    }
+    public void setId(String arg)
+    {
+        id= arg;
+    }
+    public void setCategory(String arg)
+    {
+        catName = arg;
+    }
+    public void setSchool(String arg)
+    {
+        school = arg;
+    }
+    public void setRm(String arg)
+    {
+        rmNo= arg;
+    }
+    public void setDate(String arg)
+    {
+        date = arg;
+    }
+    public void setTime(String arg)
+    {
+        time= arg;
+    }
+    public void setEntryNo(String arg)
+    {
+        entryNo= arg;
+    }
+    public void setEntryTitle(String arg)
+    {
+        entryTitle = arg;
+    }
+    public void setWeapon(String arg)
+    {
+        weapon = arg;
+    }
+    public void setNote(String arg)
+    {
+        note = arg;
+    }
+    public void setScores(int Score1, int Score2, int Score3, int Score4, int Score5, int Score6,
+    int Score7, int Score8, int Score9)
+    {
+        score1=Score1;
+        score2=Score2;
+        score3=Score3;
+        score4=Score4;
+        score5=Score5;
+        score6=Score6;
+        score7=Score7;
+        score8=Score8;
+        score9=Score9;
+    }
+    public String getId()
+    {
+        return id;
+    }
+    public String getCategory()
+    {
+        return catName;
+    }
+    public String getSchool()
+    {
+        return school;
+    }
+    public String getRm()
+    {
+        return rmNo;
+    }
+    public String getDate()
+    {
+        return date;
+    }
+    public String getTime()
+    {
+        return time;
+    }
+    public String getEntryNo()
+    {
+        return entryNo;
+    }
+    public String getEntryTitle()
+    {
+        return entryTitle;
+    }
+    public String getWeapon()
+    {
+        return weapon;
+    }
+    public String getNote()
+    {
+        return note;
+    }
+    public int getScore1()
+    {
+        return score1;
+    }
+    public int getScore2()
+    {
+        return score2;
+    }
+    public int getScore3()
+    {
+        return score3;
+    }
+    public int getScore4()
+    {
+        return score4;
+    }
+    public int getScore5()
+    {
+        return score5;
+    }
+    public int getScore6()
+    {
+        return score6;
+    }
+    public int getScore7()
+    {
+        return score7;
+    }
+    public int getScore8()
+    {
+        return score8;
+    }
+    public int getScore9()
+    {
+        return score9;
+    }
+    public void updateTotal()
+    {
+        totalScore= score1+score2+score3+score4+score5+score6+score7+score8+score9;
+    }
+    public int getTotal()
+    {
+        return totalScore;
+    }
+}
