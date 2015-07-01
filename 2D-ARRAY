@@ -3,10 +3,12 @@ import java.io.*;
 import java.util.Scanner;
 public class entryList2
 {
+    private static int countEntries;
+    private static String[][] variable;
     public static void driver(String[] args) throws Exception
     {
         Scanner infile = new Scanner(new File("ScheduleListing.txt")); //takes in textfile and calls it infile
-        int countEntries = 0; //number of entries
+        countEntries = 0; //number of entries
         while(infile.hasNext()==true) //counts number of entries. Temp was because first string is the categories
         {
             infile.nextLine();
@@ -14,7 +16,7 @@ public class entryList2
         }   
         infile.close();
         Scanner infile2 = new Scanner(new File("ScheduleListing.txt")); 
-        String[][] variable = new String[countEntries][19];
+        variable = new String[countEntries][19];
         String aLine= infile2.nextLine();
         for(int line=1; line<countEntries; line++)
         {
@@ -31,5 +33,44 @@ public class entryList2
                 }
             }
         }
+        
+        
+    }
+    
+    public void calculate()
+    {
+        Entry[] daRealEntryList = new Entry[countEntries-1];
+        for(int i=0; i<countEntries-1;i++)
+        {
+            daRealEntryList[i] = new Entry(variable[i][1], variable[i][2], variable[i][3], 
+            variable[i][4], variable[i][5], variable[i][6], variable[i][7], variable[i][8], 
+            variable[i][9], variable[i][10], Integer.parseInt(variable[i][11]), 
+            Integer.parseInt(variable[i][12]), Integer.parseInt(variable[i][13]), 
+            Integer.parseInt(variable[i][14]), Integer.parseInt(variable[i][15]), 
+            Integer.parseInt(variable[i][16]), Integer.parseInt(variable[i][17]), 
+            Integer.parseInt(variable[i][18]), Integer.parseInt(variable[i][19]));
+        }
+        ArrayList categoryList = new ArrayList();
+        for(int i=0;i<countEntries-1;i++)
+        {
+            String thing = daRealEntryList[i].getCategory();
+            if(!checkArrayList(categoryList, thing))
+            {
+                categoryList.add(thing);
+            }
+        }
+        for(int i=0;i<arg.size();i++)
+        {
+            
+        }
+    }
+    public boolean checkArrayList(ArrayList arg, String arg1)
+    {
+        for(int i=0;i<arg.size();i++)
+        {
+            if(arg.get(i).equals(arg1))
+                return false;
+        }
+        return true;
     }
 }
